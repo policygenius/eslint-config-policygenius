@@ -5,11 +5,11 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    './es6.js',
     './best-practices.js',
     './stylistic.js',
     './possible-errors.js',
     './variables.js',
-    './es6.js',
   ],
   rules: {}
 };
