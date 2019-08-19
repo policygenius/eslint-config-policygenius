@@ -70,9 +70,10 @@ module.exports = {
     'lines-around-comment': [
       'error', {
         beforeBlockComment: true,
-        afterBlockComment: true,
+        afterBlockComment: false,
+        allowBlockStart: true,
         beforeLineComment: true,
-        afterLineComment: true
+        afterLineComment: false
       }
     ],
     "lines-between-class-members": [
@@ -81,7 +82,9 @@ module.exports = {
     "linebreak-style": [
       "error", "unix"
     ],
-    "max-len": "error",
+    "max-len": [
+      "error", 140
+    ],
     'max-params': [
       'error', 5
     ],

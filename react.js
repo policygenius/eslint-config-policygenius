@@ -42,13 +42,27 @@ module.exports = {
     'react/no-unused-state': 'error',
     'react/no-will-update-set-state': 'error',
     'react/prefer-es6-class': 'error',
-    'react/prefer-stateless-function': 'error',
+    'react/prefer-stateless-function': [
+      'error', {
+        'ignorePureComponents': true
+      }
+    ],
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
     'react/require-optimization': 'error',
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
-    'react/sort-comp': 'error',
+    'react/sort-comp': [
+      'error', {
+        'order': [
+          'static-methods',
+          'instance-variables',
+          'lifecycle',
+          'everything-else',
+          'render'
+        ]
+      }
+    ],
     'react/sort-prop-types': 'error',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
@@ -66,7 +80,7 @@ module.exports = {
     ],
     'react/jsx-filename-extension': [
       'error', {
-        extensions: [".js"]
+        extensions: ['.js', '.ts', '.tsx']
       }
     ],
     'react/jsx-first-prop-new-line': [

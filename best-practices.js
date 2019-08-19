@@ -28,7 +28,12 @@ module.exports = {
     'no-script-url': 'error',
     'no-self-compare': 'error',
     'no-sequences': 'error',
-    'no-unused-expressions': 'error',
+    'no-unused-expressions': [
+      'error', {
+        'allowShortCircuit': true,
+        'allowTernary': true
+      }
+    ],
     'no-useless-call': 'error',
     'no-useless-concat': 'error',
     'no-useless-return': 'error',

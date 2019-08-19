@@ -27,9 +27,11 @@ module.exports = {
     'import/first': 'error',
     'import/no-duplicates': 'error',
     'import/extensions': [
-      'error', 'always', {
+      'error', 'never', {
         'js': 'never',
         'jsx': 'never',
+        'ts': 'never',
+        'tsx': 'never'
       }
     ],
     'import/newline-after-import': 'error',

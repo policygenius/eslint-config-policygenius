@@ -37,6 +37,7 @@ There are individual configs for the following:
 - jsx-a11y (accessibility)
 - jest
 - import
+- typescript
 - best-practices (defined by Eslint)
 - variables (defined by Eslint)
 - stylistic (defined by Eslint)
@@ -71,3 +72,8 @@ Please be sure to have the following installed when using this config.
 - `eslint-plugin-jsx-a11y@6.1.1`
 - `eslint-plugin-import@2.14.0`
 - `eslint-plugin-jest@21.22.1`
+
+### If using Typescript
+- `node >=11.10.1`
+- `@typescript-eslint/parser@^2.0.0`
+- `@typescript-eslint/eslint-plugin@^2.0.0`
