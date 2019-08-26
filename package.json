@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-policygenius",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "This package provides Policygenius' .eslintrc as an extensible shared config",
   "main": "index.js",
   "license": "MIT",
@@ -10,7 +10,10 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.22.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "typescript": "^3.5.3"
   },
   "peerDependencies": {
     "eslint": ">=5"

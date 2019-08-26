@@ -3,13 +3,12 @@ module.exports = {
   plugins: [ '@typescript-eslint/eslint-plugin' ],
   rules: {
     'no-extra-parens': 'off',
-    'react/prop-types': false,
+    'react/prop-types': 0,
   },
   overrides: [
     {
       'files': ['**/*.ts', '**/*.tsx'],
       'rules': {
-        '_comment': 'Turn off no undefined variables for all Typescript files since TS should catch this already',
         'no-undef': 'off',
         '@typescript-eslint/no-unused-vars': 'error'
       }
