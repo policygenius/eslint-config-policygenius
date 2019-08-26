@@ -9,7 +9,6 @@ module.exports = {
     {
       'files': ['**/*.ts', '**/*.tsx'],
       'rules': {
-        '_comment': 0,
         'no-undef': 'off',
         '@typescript-eslint/no-unused-vars': 'error'
       }
