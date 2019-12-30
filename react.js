@@ -115,11 +115,6 @@ module.exports = {
     'react/jsx-no-duplicate-props': 'error',
     'react/jsx-no-target-blank': 'error',
     'react/jsx-no-undef': 'error',
-    'react/jsx-curly-brace-presence': [
-      'error', {
-        props: "never"
-      }
-    ],
     'react/jsx-pascal-case': 'error',
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-sort-default-props': 'error',
