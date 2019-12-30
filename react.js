@@ -117,8 +117,7 @@ module.exports = {
     'react/jsx-no-undef': 'error',
     'react/jsx-curly-brace-presence': [
       'error', {
-        props: "never",
-        children: "never"
+        props: "never"
       }
     ],
     'react/jsx-pascal-case': 'error',
