@@ -118,7 +118,9 @@ module.exports = {
       { blankLine: "always", prev: "*", next: "return" }
     ],
     quotes: [
-      "error",   "single"
+      "error",
+      "single",
+      { "avoidEscape": true }
     ],
     "semi-spacing": "error",
     "semi-style": [
