@@ -1,9 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [ '@typescript-eslint/eslint-plugin' ],
-  rules: {
-    'react/prop-types': 0
-  },
   overrides: [
     {
       'files': ['**/*.ts', '**/*.tsx'],
@@ -92,7 +89,8 @@ module.exports = {
             'named': 'never',
             'asyncArrow': 'always'
           }
-        ]
+        ],
+        'react/prop-types': 'off'
       }
     }
   ]
