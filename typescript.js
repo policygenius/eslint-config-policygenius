@@ -59,7 +59,6 @@ module.exports = {
     ],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
-    'no-undef': 'off',
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error', {
@@ -87,6 +86,14 @@ module.exports = {
         'asyncArrow': 'always'
       }
     ],
-    'react/prop-types': 'off'
-  }
+    'react/prop-types': 0
+  },
+  overrides: [
+    {
+      'files': ['**/*.ts', '**/*.tsx'],
+      'rules': {
+        'no-undef': 'off'
+      }
+    }
+  ]
 };
