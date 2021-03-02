@@ -6,7 +6,7 @@ module.exports = {
    * as the original rule but with the addition of TypeScript support:
    * https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
    */
-  'rules': {
+  rules: {
     'brace-style': 'off',
     '@typescript-eslint/brace-style': [
       'error', '1tbs', {
@@ -86,13 +86,13 @@ module.exports = {
         'asyncArrow': 'always'
       }
     ],
-    'react/prop-types': 0
+    'react/prop-types': 0,
   },
   overrides: [
     {
       'files': ['**/*.ts', '**/*.tsx'],
       'rules': {
-        'no-undef': 'off'
+        'no-undef': 'off',
       }
     }
   ]
