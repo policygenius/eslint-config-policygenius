@@ -1,0 +1,23 @@
+#!/bin/bash
+set -eo pipefail
+
+BUMP_SIZE=$(buildkite-agent meta-data get bump-size)
+
+# npm version will update the local package.json in-place with the next version number
+echo '+++ Getting next NPM version from npm'
+VERSION=$(npm --no-git-tag-version version $BUMP_SIZE)
+echo "+++ Next version: $VERSION"
+
+echo '+++ Publishing the package'
+echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+
+npm whoami
+
+# npm publish will use the version number from the local package.json
+# which was set to the next version number by `npm version` above
+npm publish
+
+# Declare a `new-version` metadata value, to be used later in the tag_version script, along with the updated package.json artifact
+buildkite-agent meta-data set new-version $VERSION
+buildkite-agent artifact upload package.json
+buildkite-agent artifact upload yarn.lock

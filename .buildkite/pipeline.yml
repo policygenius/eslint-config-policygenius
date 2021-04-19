@@ -1,0 +1,46 @@
+---
+steps:
+  - name: ':docker: Build'
+    branches: main
+    agents:
+      queue: builder
+    plugins:
+      docker-compose:
+        build: eslint-config-policygenius
+        image-repository: us.gcr.io/pg-shared-v1/eslint-config-policygenius
+        image-name: $BUILDKITE_BUILD_NUMBER
+
+  - wait
+
+  - block: 'Trigger deploy/publish'
+    branches: main
+    prompt: 'Choose a version bump'
+    fields:
+      - select: 'Increment'
+        key: 'bump-size'
+        hint: "MAJOR: backwards-incompatible API changes // MINOR: add backwards-compatible functionality // PATCH: backwards-compatible bug fixes"
+        required: true
+        options:
+          - label: 'Major'
+            value: 'major'
+          - label: 'Minor'
+            value: 'minor'
+          - label: 'Patch'
+            value: 'patch'
+
+  - name: ':npm: Bump and Publish version'
+    branches: main
+    command: bin/bump_and_publish_version
+    agents:
+      queue: builder
+    plugins:
+      docker-compose:
+        run: eslint-config-policygenius
+
+  - wait
+
+  - name: ':octocat: Tag new version'
+    branches: main
+    command: bin/tag_version
+    agents:
+      queue: builder
