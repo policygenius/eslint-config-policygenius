@@ -1,0 +1,24 @@
+#!/bin/bash
+
+git config --global user.name "Randy the PolicyGenius Robot"
+git config --global user.email "robot@policygenius.com"
+git config --global push.default simple
+
+git fetch
+git checkout $BUILDKITE_BRANCH
+git reset --hard origin/$BUILDKITE_BRANCH
+
+buildkite-agent artifact download package.json .
+buildkite-agent artifact download yarn.lock .
+VERSION=$(buildkite-agent meta-data get new-version)
+
+# -- Update Package.json
+echo "Adding updated package.json and tagging new git tag $VERSION"
+git add package.json
+git add yarn.lock
+git tag -a "$VERSION" -m "Publish version $VERSION"
+
+# -- 🚀 send it
+echo 'Committing updated package.json with version bump to main'
+git commit -m "Bump to $VERSION [ci skip]"
+git push --follow-tags origin $BUILDKITE_BRANCH
