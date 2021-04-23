@@ -31,10 +31,8 @@ module.exports = {
     '@typescript-eslint/func-call-spacing': [
       'error', 'never'
     ],
-    'indent': 'off',
-    '@typescript-eslint/indent': [
-      'error', 2
-    ],
+    'indent': 'off', // Prevent conflicts with Prettier
+    '@typescript-eslint/indent': 'off', // Prevent conflicts with Prettier
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': [
       'error', {
@@ -52,14 +50,8 @@ module.exports = {
     ],
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': 'error',
-    'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': [
-      'error', 'all', {
-        nestedBinaryExpressions: false,
-        ignoreJSX: 'all',
-        enforceForArrowConditionals: false
-      }
-    ],
+    'no-extra-parens': 'off', // Prevent conflicts with Prettier
+    '@typescript-eslint/no-extra-parens': 'off', // Prevent conflicts with Prettier
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
     'no-unused-expressions': 'off',

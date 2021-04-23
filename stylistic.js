@@ -4,11 +4,7 @@ module.exports = {
     node: true,
   },
   rules: {
-    "array-bracket-spacing": [
-      "error", "never", {
-        singleValue: true
-      }
-    ],
+    "array-bracket-spacing": "off", // Prevent conflicts with Prettier
     'block-spacing': [
       'error', 'always'
     ],
@@ -49,9 +45,7 @@ module.exports = {
         allowArrowFunctions: true
       }
     ],
-    "function-paren-newline": [
-      "error",   "consistent"
-    ],
+    "function-paren-newline": "off", // Prevent conflicts with Prettier
     indent: [
       "error", 2
     ],
@@ -82,9 +76,7 @@ module.exports = {
     "linebreak-style": [
       "error", "unix"
     ],
-    "max-len": [
-      "error", 140
-    ],
+    "max-len": "off", // Prefer prettier printWidth config
     'max-params': [
       'error', 5
     ],
@@ -98,11 +90,7 @@ module.exports = {
     ],
     'no-trailing-spaces': 'error',
     'no-unneeded-ternary': 'error',
-    "object-curly-newline": [
-      "error", {
-        consistent: true
-      }
-    ],
+    "object-curly-newline": "off", // Prevent conflicts with Prettier
     "object-curly-spacing": [
       "error", "always"
     ],
