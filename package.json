@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-policygenius",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "This package provides Policygenius' .eslintrc as an extensible shared config",
   "main": "index.js",
   "license": "MIT",
