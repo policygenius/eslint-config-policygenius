@@ -1,8 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: [ '@typescript-eslint' ],
   extends: [ 'plugin:@typescript-eslint/recommended' ],
   /**
    * Many of these rules fall into the category of "Extension Rules", which have the same functionality
