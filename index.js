@@ -12,7 +12,8 @@ module.exports = {
     './best-practices.js',
     './stylistic.js',
     './possible-errors.js',
-    './variables.js'
+    './variables.js',
+    'prettier'
   ],
   rules: {
     'prettier/prettier': ['error', {
