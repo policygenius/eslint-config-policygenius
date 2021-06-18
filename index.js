@@ -3,9 +3,9 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: [
-    'prettier'
-  ],
+  // plugins: [
+  //   'prettier'
+  // ],
   extends: [
     'eslint:recommended',
     './es6.js',
@@ -15,10 +15,10 @@ module.exports = {
     './variables.js',
     'prettier'
   ],
-  rules: {
-    'prettier/prettier': ['error', {
-      'singleQuote': true,
-      'printWidth': 500
-    }]
-  }
+  // rules: {
+  //   'prettier/prettier': ['error', {
+  //     'singleQuote': true,
+  //     'printWidth': 500
+  //   }]
+  // }
 };
