@@ -5,9 +5,7 @@ module.exports = {
   },
   rules: {
     "array-bracket-spacing": [
-      "error", "never", {
-        singleValue: true
-      }
+      "error", "never"
     ],
     'block-spacing': [
       'error', 'always'

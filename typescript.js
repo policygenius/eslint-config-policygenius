@@ -29,9 +29,7 @@ module.exports = {
       'error', 'never'
     ],
     'indent': 'off',
-    '@typescript-eslint/indent': [
-      'error', 2
-    ],
+    '@typescript-eslint/indent': 'off',
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': [
       'error', {
