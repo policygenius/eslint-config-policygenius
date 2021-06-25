@@ -47,9 +47,7 @@ module.exports = {
         allowArrowFunctions: true
       }
     ],
-    "function-paren-newline": [
-      "error",   "consistent"
-    ],
+    "function-paren-newline": "off",
     indent: [
       "error", 2
     ],
@@ -80,9 +78,7 @@ module.exports = {
     "linebreak-style": [
       "error", "unix"
     ],
-    "max-len": [
-      "error", 140
-    ],
+    "max-len": "off", // Prefer prettier printWidth config
     'max-params': [
       'error', 5
     ],

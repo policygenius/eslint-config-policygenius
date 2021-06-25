@@ -24,6 +24,7 @@ module.exports = {
         after: true
       }
     ],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': [
       'error', 'never'
@@ -48,13 +49,7 @@ module.exports = {
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': 'error',
     'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': [
-      'error', 'all', {
-        nestedBinaryExpressions: false,
-        ignoreJSX: 'all',
-        enforceForArrowConditionals: false
-      }
-    ],
+    '@typescript-eslint/no-extra-parens': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
     'no-unused-expressions': 'off',
