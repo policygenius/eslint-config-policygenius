@@ -3,9 +3,6 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: [
-    'prettier'
-  ],
   extends: [
     'eslint:recommended',
     './es6.js',
@@ -13,11 +10,5 @@ module.exports = {
     './stylistic.js',
     './possible-errors.js',
     './variables.js',
-  ],
-  rules: {
-    'prettier/prettier': ['error', {
-      'singleQuote': true,
-      'printWidth': 100
-    }]
-  }
+  ]
 };

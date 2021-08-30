@@ -27,7 +27,6 @@ module.exports = {
         'after': false
       }
     ],
-    'no-confusing-arrow': 'off', // Prevent conflicts with Prettier
     'no-duplicate-imports': [
       'error', { includeExports: true }
     ],
