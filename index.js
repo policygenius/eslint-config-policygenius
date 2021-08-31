@@ -10,6 +10,5 @@ module.exports = {
     './stylistic.js',
     './possible-errors.js',
     './variables.js',
-  ],
-  rules: {}
+  ]
 };

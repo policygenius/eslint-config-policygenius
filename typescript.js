@@ -10,6 +10,28 @@ module.exports = {
    * https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
    */
   rules: {
+    // Turn off the following rules to prevent conflicts when used with Prettier
+
+    /*
+      We recommend the following config if not using Prettier:
+      '@typescript-eslint/indent': [
+        'error', 2
+      ]
+    */
+    '@typescript-eslint/indent': 'off',
+     /*
+      We recommend the following config if not using Prettier:
+      '@typescript-eslint/no-extra-parens': [
+        'error', 'all', {
+          nestedBinaryExpressions: false,
+          ignoreJSX: 'all',
+          enforceForArrowConditionals: false
+        }
+      ]
+    */
+    '@typescript-eslint/no-extra-parens': 'off',
+    
+
     'brace-style': 'off',
     '@typescript-eslint/brace-style': [
       'error', '1tbs', {
@@ -31,10 +53,6 @@ module.exports = {
     '@typescript-eslint/func-call-spacing': [
       'error', 'never'
     ],
-    'indent': 'off',
-    '@typescript-eslint/indent': [
-      'error', 2
-    ],
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': [
       'error', {
@@ -52,14 +70,6 @@ module.exports = {
     ],
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': 'error',
-    'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': [
-      'error', 'all', {
-        nestedBinaryExpressions: false,
-        ignoreJSX: 'all',
-        enforceForArrowConditionals: false
-      }
-    ],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
     'no-unused-expressions': 'off',

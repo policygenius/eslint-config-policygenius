@@ -27,9 +27,6 @@ module.exports = {
         'after': false
       }
     ],
-    'no-confusing-arrow': [
-      'error', { allowParens: true }
-    ],
     'no-duplicate-imports': [
       'error', { includeExports: true }
     ],

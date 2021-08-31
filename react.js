@@ -14,6 +14,25 @@ module.exports = {
     }
   },
   rules: {
+    // Turn off the following rules to prevent conflicts when used with Prettier
+
+    /*
+      We recommend the following config if not using Prettier:
+      
+      prop: "parens-new-line"
+    */
+    'react/jsx-wrap-multilines': [
+      'error', {
+        return: 'parens-new-line',
+        declaration: "parens-new-line",
+        assignment: "parens-new-line",
+        arrow: "parens-new-line",
+        condition: "parens-new-line",
+        logical: "parens-new-line",
+        prop: "ignore" // Prevent conflicts with Prettier
+      }
+    ],
+
     'react/default-props-match-prop-types': 'error',
     'react/destructuring-assignment': [
       'error', 'always'
@@ -128,16 +147,5 @@ module.exports = {
     ],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
-    'react/jsx-wrap-multilines': [
-      'error', {
-        return: 'parens-new-line',
-        declaration: "parens-new-line",
-        assignment: "parens-new-line",
-        arrow: "parens-new-line",
-        condition: "parens-new-line",
-        logical: "parens-new-line",
-        prop: "parens-new-line"
-      }
-    ],
   },
 }

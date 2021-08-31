@@ -3,12 +3,25 @@ module.exports = {
     browser: true,
     node: true,
   },
+  plugins: [
+    'prettier'
+  ],
   rules: {
-    "array-bracket-spacing": [
-      "error", "never", {
-        singleValue: true
-      }
-    ],
+    // Prettier config
+    'prettier/prettier': ['error', {
+      'singleQuote': true,
+      'printWidth': 100
+    }],
+
+    // Turn off the following rules to prevent conflicts with Prettier
+    "array-bracket-spacing": "off",
+    'indent': 'off',
+    "max-len": "off", // Prefer Prettier printWidth config
+    'no-confusing-arrow': 'off',
+    'no-extra-parens': 'off',
+    "function-paren-newline": "off",
+    "object-curly-newline": "off",
+    
     'block-spacing': [
       'error', 'always'
     ],
@@ -49,12 +62,6 @@ module.exports = {
         allowArrowFunctions: true
       }
     ],
-    "function-paren-newline": [
-      "error",   "consistent"
-    ],
-    indent: [
-      "error", 2
-    ],
     "key-spacing": [
       "error", {
         beforeColon: false,
@@ -82,9 +89,6 @@ module.exports = {
     "linebreak-style": [
       "error", "unix"
     ],
-    "max-len": [
-      "error", 140
-    ],
     'max-params': [
       'error', 5
     ],
@@ -98,11 +102,6 @@ module.exports = {
     ],
     'no-trailing-spaces': 'error',
     'no-unneeded-ternary': 'error',
-    "object-curly-newline": [
-      "error", {
-        consistent: true
-      }
-    ],
     "object-curly-spacing": [
       "error", "always"
     ],
