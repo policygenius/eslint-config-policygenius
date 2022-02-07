@@ -67,13 +67,14 @@ As an example, if you want to use the base config plus the react configs, you wo
 
 Please be sure to have the following installed when using this config.
 
-- `eslint >= 5`
-- `eslint-plugin-react@7.11.1`
-- `eslint-plugin-jsx-a11y@6.1.1`
-- `eslint-plugin-import@2.14.0`
-- `eslint-plugin-jest@21.22.1`
+- `eslint >= 8`
+- `eslint-plugin-react@7.28.0`
+- `eslint-plugin-jsx-a11y@6.5.1`
+- `eslint-plugin-import@2.25.4`
+- `eslint-plugin-jest@26.0.0`
+- `eslint-plugin-prettier@4.0.0`
 
 ### If using Typescript
-- `node >=11.10.1`
-- `@typescript-eslint/parser@^2.0.0`
-- `@typescript-eslint/eslint-plugin@^2.0.0`
+- `node >=12.22.0`
+- `@typescript-eslint/parser@^5.10.2`
+- `@typescript-eslint/eslint-plugin@^5.10.2`
