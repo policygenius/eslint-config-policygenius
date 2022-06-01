@@ -10,18 +10,18 @@ module.exports = {
       }
     ],
     'jest/expect-expect': 'error',
-    'jest/lowercase-name': [
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'warn',
+    'jest/no-jasmine-globals': 'error',
+    'jest/no-test-prefixes': 'warn',
+    'jest/prefer-lowercase-title': [
       'error',
       {
         ignore: ['describe'],
       }
     ],
-    'jest/no-disabled-tests': 'warn',
-    'jest/no-focused-tests': 'warn',
-    'jest/no-jasmine-globals': 'error',
-    'jest/no-test-prefixes': 'warn',
     'jest/prefer-to-have-length': 'off',
-    'jest/valid-describe': 'error',
+    'jest/valid-describe-callback': 'error',
     'jest/valid-expect-in-promise': 'error',
   }
 }
