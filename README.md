@@ -75,6 +75,6 @@ Please be sure to have the following installed when using this config.
 - `eslint-plugin-prettier@4.0.0`
 
 ### If using Typescript
-- `node >=12.22.0`
+- `node >=16.18.0`
 - `@typescript-eslint/parser@^6.1.0`
 - `@typescript-eslint/eslint-plugin@^6.1.0`
