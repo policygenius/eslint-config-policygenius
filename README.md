@@ -76,5 +76,5 @@ Please be sure to have the following installed when using this config.
 
 ### If using Typescript
 - `node >=12.22.0`
-- `@typescript-eslint/parser@^5.10.2`
-- `@typescript-eslint/eslint-plugin@^5.10.2`
+- `@typescript-eslint/parser@^6.1.0`
+- `@typescript-eslint/eslint-plugin@^6.1.0`
