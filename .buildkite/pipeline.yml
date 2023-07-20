@@ -1,7 +1,6 @@
 ---
 steps:
   - name: ':docker: Build'
-    branches: main
     agents:
       queue: builder
     plugins:
